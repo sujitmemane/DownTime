@@ -7,7 +7,7 @@ const items = [
     id: 1,
     title: "Tarotit",
     img: "https://play-lh.googleusercontent.com/bJLiFksu6v2KZ2nP-32cxPBsz0ZvvW3HcxBCLvjalwBo9bRJTXhMwKDNOhcoqmGgLtI=w480-h960",
-    desc: "Tarotit, an innovative Virtual Tarot Buddy that provides accurate Tarot Readings 24/7, emulating the experience of a Human Tarot Reader, and it's completely free. On average, seeking a personal Tarot Reading involves personal references, opening up to strangers, costs $50+, and a wait time of 24+ hours. In contrast, Tarotit is accurate, free, and available 24/7. While existing platforms are automated and limited to predefined questions, our logic allows our platform to respond to any user inquiry, mimicking human Tarot Readers. Our system undergoes training on datasets, similar to human Tarot Readers. The team is also a certified Tarot Reader with 7+ years of offline experience.",
+    desc: "Tarotit, an innovative Virtual Tarot Buddy that provides accurate Tarot Readings 24/7, emulating the experience of a Human Tarot Reader, and it's completely free. On average, seeking a personal Tarot Reading involves personal references, opening up to strangers, costs $50+, and a wait time of 24+ hours. In contrast, Tarotit is accurate, free, and available 24/7.  ",
     link: "https://play.google.com/store/apps/details?id=com.tarotit.app&hl=en_IN&gl=US",
   },
   {
