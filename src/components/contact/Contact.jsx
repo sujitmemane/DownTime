@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const variants = {
   initial: {
@@ -21,8 +22,9 @@ const variants = {
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -31,17 +33,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_t1j9g18",
+        "template_fj3q5uk",
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        "cNMvGayfXFe1uA-ZY"
       )
       .then(
         (result) => {
-          setSuccess(true);
+          toast.success("Your Message Submitted Successfully!");
+          setName("");
+          setEmail("");
+          setMessage("");
         },
         (error) => {
-          setError(true);
+          toast.error("Error submitting your message");
         }
       );
   };
@@ -58,7 +63,7 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>singhchetan0542@gmail.com</span>
+          <span>downtime968@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
@@ -105,12 +110,30 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name" />
-          <input type="email" required placeholder="Email" name="email" />
-          <textarea rows={8} placeholder="Message" name="message" />
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            placeholder="Name"
+            name="name"
+          />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            placeholder="Email"
+            name="email"
+          />
+          <textarea
+            rows={8}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Message"
+            name="message"
+          />
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
         </motion.form>
       </div>
     </motion.div>

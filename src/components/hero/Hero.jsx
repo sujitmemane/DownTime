@@ -47,9 +47,10 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>DOWNTIME</motion.h2>
+          <motion.h2 variants={textVariants}>downTIME ? No More</motion.h2>
           <motion.h1 variants={textVariants}>
-            We Develop Products Which Will 10x Your Revenue
+            We help you by making products from scratch, increasing revenue, and
+            scaling.
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <a href="#Our Work">

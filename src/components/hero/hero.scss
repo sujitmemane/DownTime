@@ -44,14 +44,14 @@
       h2 {
         font-size: 30px;
         color: orange;
-        letter-spacing: 10px;
+
       }
 
       h1 {
-        font-size: 50px;
+        font-size: 40px;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 30px;
         }
       }
 
