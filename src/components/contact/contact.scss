@@ -1,7 +1,7 @@
 @import "../../app.scss";
 
 .contact {
-height: auto;
+  height: 100%;
   max-width: 1366px;
   margin: auto;
   display: flex;
@@ -11,6 +11,7 @@ height: auto;
   @include mobile {
     width: 100%;
     padding: 10px;
+    gap: 10px;
     flex-direction: column;
   }
 
@@ -21,11 +22,10 @@ height: auto;
     gap: 40px;
 
     @include mobile {
-      gap: 10px;
+      gap: 5px;
       text-align: center;
       align-items: center;
       margin-top: 70px;
-
     }
 
     h1 {
@@ -62,7 +62,7 @@ height: auto;
     form {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 20px;
 
       input,
       textarea {
